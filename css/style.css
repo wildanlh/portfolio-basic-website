@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Poppins:wght@500;600;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: medium;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background: #ffffff;
+  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.22);
+}
+
+header.navbar-container {
+  display: flex;
+  padding: 16px 0;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 99;
+  top: 0;
+  position: sticky;
+}
+
+header.navbar-container div.logo img {
+  width: 128px;
+}
+
+header.navbar-container nav.menu ul {
+  display: flex;
+  gap: 30px;
+}
+
+header.navbar-container nav.menu ul li {
+  list-style: none;
+}
+
+header.navbar-container nav.menu ul li a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #0464f0;
+  transition: all 0.1s ease-in-out;
+}
+
+header.navbar-container nav.menu ul li a:hover {
+  border-bottom: 2px solid #0464f0;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1300px;
+  width: 100%;
+  padding: 0rem 5rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+main div.content article.home {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  height: 100vh;
+  justify-content: center;
+}
+
+main div.content article.home div.description h3 {
+  line-height: 0;
+  font-size: 20px;
+}
+
+main div.content article.home div.description h1 {
+  color: #0464f0;
+  font-size: 48px;
+  line-height: 0;
+}
+
+main div.content article.home div.description h2 {
+  line-height: 0;
+}
+
+main div.content article.about {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+main div.content article.about div.description,
+main div.content article.about div.skills {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main div.content article.about div.skills ul {
+  padding-left: 0;
+  display: flex;
+  gap: 20px 10px;
+}
+
+main div.content article.about div.skills ul li {
+  list-style: none;
+}
+
+main div.content article.about div.skills img {
+  width: 64px;
+}
+
+main div.content article.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100vh;
+  justify-content: center;
+}
+
+main div.content article.contact form input {
+  outline: 0;
+  border: 1px solid #0464f0;
+  padding: 8px 14px;
+  border-radius: 10px;
+  height: 50px;
+}
+
+main div.content article.contact form textarea {
+  border-radius: 10px;
+  height: 100px;
+  resize: none;
+  outline: 0;
+  padding: 8px 14px;
+  border: 1px solid #0464f0;
+}
+
+main div.content article.contact form button {
+  padding: 10px 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  background: #0464f0;
+  color: #ffffff;
+  border: #0464f0;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+main aside {
+  max-width: 380px;
+  width: 100%;
+}
+
+main aside article.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+main aside article.profile h3 {
+  display: none;
+}
+
+main aside article.profile a.button {
+  text-decoration: none;
+  padding: 10px 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #0464f0;
+  border: 1px solid #0464f0;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+main aside article.profile a.button:hover {
+  text-decoration: none;
+  background: #0464f0;
+  color: #ffffff;
+  border: 1px solid #0464f0;
+  border-radius: 5px;
+}
+
+main aside article.profile img {
+  width: 280px;
+  border-radius: 999px;
+}
+
+footer {
+  display: flex;
+  padding: 16px 0;
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer div.logo img {
+  width: 72px;
+}
+
+footer div.copyright {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    margin: 0;
+    max-width: none;
+    padding: 0;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  main div.content article.home {
+    align-items: center;
+  }
+
+  main div.content article.about {
+    flex-direction: column;
+    height: 100vh;
+    gap: 0;
+  }
+
+  main div.content article.about div.description,
+  main div.content article.about div.skills {
+    padding-inline: 20px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  main div.content article.contact form {
+    padding-inline: 20px;
+  }
+
+  main aside {
+    max-width: none;
+  }
+
+  main aside article.profile h3 {
+    display: block;
+    line-height: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header.navbar-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  main div.content article.home {
+    text-align: center;
+  }
+
+  main div.content article.home div.description h3,
+  main div.content article.home div.description h1,
+  main div.content article.home div.description h2 {
+    line-height: 100%;
+  }
+}
